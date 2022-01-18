@@ -27,10 +27,10 @@ class BitcoinController extends Controller
         ]);
 
         
-        $apiKey = 'po3Utcn9jJi5JYVNYAT8ZyQ09rXp46xC'; // specify
-        $apiSecret = 'lobkZLhTyPYVJ9QE4oxmEhQ6l3zQctUH'; // specify
+        $apiKey = 'hqfesjwjkwqepo3Utcn9jJi5JYVNYAT8ZyQ09rXp46xCjkwjkjwqkj'; // specify
+        $apiSecret = 'jwqjkqwlobkZLhTyPYVJ9QE4oxmEhQ6l3zQctUHjkwjkjwq'; // specify
         $queryParams = [
-            'merchant' => 'wBLYgx1DkR9', // replace
+            'merchant' => 'wBLYjkeFkR9', // replace
             'apikey' => $apiKey,
             'nonce' => time(),
             'to' => '386UpLvX7mpBTT8YD2xwCGQdHh6pnb85VX', // replace!
