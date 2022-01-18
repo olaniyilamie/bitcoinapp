@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BitcoinController;
+use App\Http\Controllers\EthereumController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/bitcoins',[BitcoinController::class,'index'])->name('index');
+Route::get('/bitcoins',[BitcoinController::class,'index'])->name('show_bit');
 Route::post('/sellbitcoins',[BitcoinController::class,'sellBitcoin'])->name('sellbtc');
+
+// Ethereum Route
+Route::get('/ethereum',[EthereumController::class,'index'])->name('show_eth');
