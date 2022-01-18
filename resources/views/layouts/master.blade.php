@@ -39,6 +39,7 @@
                                 Giftcard
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="{{route('show_giftcards')}}">All cards</a></li>
                                     <li><a class="dropdown-item" href="#">Apple</a></li>
                                     <li><a class="dropdown-item" href="#">Itunes</a></li>
                                     <li><a class="dropdown-item" href="#">Ebay, Amex, Macy, Vanilla</a></li>
