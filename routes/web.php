@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BitcoinController;
 use App\Http\Controllers\EthereumController;
+use App\Http\Controllers\GiftcardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,6 @@ Route::post('/sellbitcoins',[BitcoinController::class,'sellBitcoin'])->name('sel
 
 // Ethereum Route
 Route::get('/ethereum',[EthereumController::class,'index'])->name('show_eth');
+
+//giftcard Route
+Route::get('/giftcards',[GiftcardController::class,'index'])->name('show_giftcards');
