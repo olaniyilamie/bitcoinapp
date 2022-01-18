@@ -28,10 +28,10 @@
                                 Crypto 
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Bitcoins</a></li>
-                                    <li><a class="dropdown-item" href="#">USDT</a></li>
+                                    <li><a class="dropdown-item" href="{{route('show_bit')}}">Bitcoins</a></li>
+                                    <li><a class="dropdown-item" href="">USDT</a></li>
                                     <li><a class="dropdown-item" href="#">Perfect Money</a></li>
-                                    <li><a class="dropdown-item" href="#">Ethereum </a></li>
+                                    <li><a class="dropdown-item" href="{{route('show_eth')}}">Ethereum </a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
