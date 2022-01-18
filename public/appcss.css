@@ -1,0 +1,43 @@
+.navbg{
+    background-color:rgb(7,5,66);
+}
+
+#bitcalculator{
+    background-color:yellow;
+    min-height:300px;
+    background: url('bglogo.png') repeat center;
+    background-size:contain;
+}
+
+#bitoverlay{
+    background:rgba(35, 44, 119,0.9);
+}
+
+#buybit{
+    color:#1f2342;
+    background-color:rgb(208, 137, 62);
+    margin:0px;
+    padding:10px;
+    text-align:center;
+    font-weight:bolder;
+}
+
+#transaction_section{
+    background-color:rgb(214, 204, 206);
+    /*background-image:conic-gradient(rgba(128, 137, 204,0.3) 30deg, rgba(196, 153, 109,0.8) 180deg,  rgba(128, 137, 204,0.3)300deg, rgba(196, 153, 109,0.4) 340deg, rgba(128, 137, 204,0.3)360deg) */
+}
+
+#footer{
+    background-color:#1f2342;
+    color:white;
+}
+
+.links{
+    color:white;
+    font-size:25px;
+}
+
+.ullink{
+    color:white;
+    list-style:none;
+}
