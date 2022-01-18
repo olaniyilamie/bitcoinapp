@@ -9,6 +9,13 @@
     background-size:contain;
 }
 
+#ethcalculator{
+    background-color:yellow;
+    min-height:300px;
+    background: url('eth.png') repeat center;
+    background-size:contain;
+}
+
 #bitoverlay{
     background:rgba(35, 44, 119,0.9);
 }
