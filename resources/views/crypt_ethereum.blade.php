@@ -6,7 +6,7 @@
         <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
     </div>
     @endif
-    <div class="row  text-light" id="bitcalculator">
+    <div class="row  text-light" id="ethcalculator">
         <div class="col-12 py-5 text-center font-weight-bolder" id="bitoverlay">
             <div class="row">
                 <div class="col-12 pt-3">
@@ -71,7 +71,7 @@
     </div>
     <div class="row mt-4">
         <div class="col-12 p-0">
-            <h2 class="rounded" id="buybit">SELL ETHEREUM <i class="fab fa-bitcoin pl-3"></i></h2>
+            <h2 class="rounded" id="buybit">SELL ETHEREUM <i class="fab fa-ethereum pl-3"></i></h2>
         </div>
     </div>    
     {{ Form::open(array('url' => route('sellbtc'), 'method' => 'POST' )) }}
@@ -142,7 +142,7 @@
                     </div>
                     @error('toReceive')
                         <div class="col-12">
-                            <small class="text-danger">{{ $message }}</small>
+                            <small class="text-danger">{{$message}}</small>
                         </div>
                     @enderror
                 </div>
@@ -172,7 +172,7 @@
     <script type="text/javascript">
         $(document).ready(function(){
             $("#quantity").keyup("input", function(){
-                let bitcoinValue=$('#ethereumValue').html();
+                let ethereumValue=$('#ethereumValue').html();
                 if($(this).val() < 10 ){
                     $('#qtyMsg').html('quantity cannot be less than 10');
                     $('#qtyMsg').removeClass('text-muted');
