@@ -156,7 +156,7 @@
                 </div>
             </div>
             <div class="col-12 input-group">
-                <input type="submit" name="submit" value="SELL NOW" class="btn btn-sm btn-dark btn-block my-2 font-weight-bold">
+                <input type="submit" name="submit" value="SELL NOW" class="btn btn-sm btn-dark btn-block my-2 font-weight-bold sellnowBtn">
             </div>
             <div class="col-12">
                 <p><b>Note: ₦30 bank transfer charge will be deducted.</b> We won't be held responsible for funding a wrong <b>Account Number</b> provided by you. Pls crosscheck the info you filled.
