@@ -86,8 +86,8 @@
                                 <i class="fas fa-sign-in-alt"></i> Login/Sign Up  
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Sign up</a></li>
-                                    <li><a class="dropdown-item" href="#">login</a></li>
+                                    <li><a class="dropdown-item" href="" data-toggle="modal" data-target="#signup">Sign up</a></li>
+                                    <li><a class="dropdown-item" href="{" data-toggle="modal" data-target="#login">login</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -130,5 +130,98 @@
                     <hr>
                 </footer>
             </div>
+
+
+  <!-- Login Modal -->
+  <div class="modal fade " id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body card">
+                <div class="row d-flex justify-content-around my-5">
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-12 p-0">
+                                <p class="font-weight-bold py-2 text-center rounded"> DASCOIN <img src="{{url('logo.png')}}" class="img-fluid"> </p>
+                            </div>
+                            <div class="col-12 py-2">
+                                <label class="text-right small font-weight-bold" for="email-address">Email or Username</label>
+                                <input id="username" type="text" class="form-control rounded" required placeholder="Enter your email address or username">        
+                            </div>
+                            <div class="col-12 py-0 my-0">
+                                <label class="text-right my-0 small font-weight-bold" for="email-address">Password</label>
+                            </div>
+                            <div class="col-12 py-2 input-group">
+                                <input id="pwd" type="password" class="form-control rounded" required placeholder="Enter your passcode">
+                                <span class="input-group-text" id="changeIcon"><i class="fas fa-eye btn btn-sm" id="showpwd"></i></span>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <button class="btn btn-dim btn-block btn-lg sellnowBtn py-2 mt-0 font-weight-bold">LOGIN</button>
+                                <small> New to DasCoin ?</small><a class="float-right small">Create Account</a>
+                            </div>
+                            <div class="col-12 text-center">
+                                <small class="font-weight-bold text-muted">--- OR ---</small>
+                            </div>
+                            <div class="col-12 text-center">
+                                <a href=""><span class="px-3 giftlink font-weight-bold">Facebook</span></i></a> 
+                                <a href=""><span class="px-3 giftlink font-weight-bold">Google</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div class="modal fade " id="signup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body card">
+                <div class="row d-flex justify-content-around my-5">
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-12 p-0 mt-0">
+                                <p class="font-weight-bold py-2 text-center rounded"> DASCOIN <img src="{{url('logo.png')}}" class="img-fluid"> </p>
+                            </div>
+                            <div class="col-12 py-2">
+                                <label class="text-right small font-weight-bold" for="email-address">PhoneNumber</label>
+                                <input id="number" type="text" class="form-control rounded" required placeholder="Phone number with country code e.g +2347045554345">        
+                            </div>
+                            <div class="col-12 py-2">
+                                <label class="text-right small font-weight-bold" for="email-address">Username</label>
+                                <input id="email" type="text" class="form-control rounded" required placeholder="Username">        
+                            </div>
+                            <div class="col-12 py-2">
+                                <label class="text-right small font-weight-bold" for="email-address">Email</label>
+                                <input id="username" type="email" class="form-control rounded" required placeholder="Email">        
+                            </div>
+                            <div class="col-12 py-0 my-0">
+                                <label class="text-right my-0 small font-weight-bold" for="email-address">Password</label>
+                            </div>
+                            <div class="col-12 py-2">
+                                <input id="pwd" type="password" class="form-control rounded" required placeholder="Password">
+                            </div>
+                            <div class="col-12 py-2">
+                                <input id="pwd" type="password" class="form-control rounded" required placeholder="Confirm Password">
+                            </div>
+                            <div class="col-12 mb-2">
+                                <button class="btn btn-dim btn-block btn-lg sellnowBtn py-2 mt-0 font-weight-bold">SIGN UP</button>
+                                <small> Already have an account?</small><a href="{{route('login')}}" class="float-right small">Login</a>
+                            </div>
+                            <div class="col-12 text-center">
+                                <small class="font-weight-bold text-muted">--- OR ---</small>
+                            </div>
+                            <div class="col-12 text-center">
+                                <a href=""><span class="px-3 giftlink font-weight-bold">Facebook</span></i></a> 
+                                <a href=""><span class="px-3 giftlink font-weight-bold">Google</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
         </body>
     </html>
