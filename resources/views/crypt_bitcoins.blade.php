@@ -83,12 +83,12 @@
     </div>
     <div class="row mt-4">
         <div class="col-12 p-0">
-            <h2 class="rounded" id="buybit">SELL BITCOIN <i class="fab fa-bitcoin pl-3"></i></h2>
+            <h2 class="rounded miniheading">SELL BITCOIN <i class="fab fa-bitcoin pl-3"></i></h2>
         </div>
     </div>    
     {{ Form::open(array('url' => route('sellbtc'), 'method' => 'POST' )) }}
         @csrf
-        <div class="row d-flex justify-content-around" id="transaction_section">
+        <div class="row d-flex justify-content-around transaction_section">
             <div class="col-md-4">
                 <div class="row">
                     <div class="col-12">
@@ -186,7 +186,7 @@
                 </div>
             </div>
             <div class="col-12 input-group">
-                <input type="submit" name="submit" value="SELL NOW" class="btn btn-sm btn-dark btn-block my-2 font-weight-bold">
+                <input type="submit" name="submit" value="SELL NOW" class="btn btn-sm sellnowBtn btn-block my-2 font-weight-bold">
             </div>
             <div class="col-12">
                 <p><b>Note: ₦30 bank transfer charge will be deducted.</b> We won't be held responsible for funding a wrong <b>Account Number</b> provided by you. Pls crosscheck the info you filled.

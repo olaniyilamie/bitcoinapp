@@ -71,12 +71,12 @@
     </div>
     <div class="row mt-4">
         <div class="col-12 p-0">
-            <h2 class="rounded" id="buybit">SELL ETHEREUM <i class="fab fa-ethereum pl-3"></i></h2>
+            <h2 class="rounded miniheading">SELL ETHEREUM <i class="fab fa-ethereum pl-3"></i></h2>
         </div>
     </div>    
     {{ Form::open(array('url' => route('sellbtc'), 'method' => 'POST' )) }}
         @csrf
-        <div class="row d-flex justify-content-around" id="transaction_section">
+        <div class="row d-flex justify-content-around transaction_section">
             <div class="col-md-4">
                 <div class="row">
                     <div class="col-12">
