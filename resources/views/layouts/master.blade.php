@@ -156,7 +156,7 @@
                             </div>
                             <div class="col-12 mb-2">
                                 <button class="btn btn-dim btn-block btn-lg sellnowBtn py-2 mt-0 font-weight-bold">LOGIN</button>
-                                <small> New to DasCoin ?</small><a class="float-right small">Create Account</a>
+                                <small> New to DasCoin ?</small><a href="{{route('signup')}}" class="float-right small">Create Account</a>
                             </div>
                             <div class="col-12 text-center">
                                 <small class="font-weight-bold text-muted">--- OR ---</small>
@@ -173,52 +173,84 @@
     </div>
   </div>
 
-  <!-- Login Modal -->
+  <!-- Sign up Modal -->
   <div class="modal fade " id="signup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-body card">
-                <div class="row d-flex justify-content-around my-5">
-                    <div class="col-md-10">
-                        <div class="row">
-                            <div class="col-12 p-0 mt-0">
-                                <p class="font-weight-bold py-2 text-center rounded"> DASCOIN <img src="{{url('logo.png')}}" class="img-fluid"> </p>
-                            </div>
-                            <div class="col-12 py-2">
-                                <label class="text-right small font-weight-bold" for="email-address">PhoneNumber</label>
-                                <input id="number" type="text" class="form-control rounded" required placeholder="Phone number with country code e.g +2347045554345">        
-                            </div>
-                            <div class="col-12 py-2">
-                                <label class="text-right small font-weight-bold" for="email-address">Username</label>
-                                <input id="email" type="text" class="form-control rounded" required placeholder="Username">        
-                            </div>
-                            <div class="col-12 py-2">
-                                <label class="text-right small font-weight-bold" for="email-address">Email</label>
-                                <input id="username" type="email" class="form-control rounded" required placeholder="Email">        
-                            </div>
-                            <div class="col-12 py-0 my-0">
-                                <label class="text-right my-0 small font-weight-bold" for="email-address">Password</label>
-                            </div>
-                            <div class="col-12 py-2">
-                                <input id="pwd" type="password" class="form-control rounded" required placeholder="Password">
-                            </div>
-                            <div class="col-12 py-2">
-                                <input id="pwd" type="password" class="form-control rounded" required placeholder="Confirm Password">
-                            </div>
-                            <div class="col-12 mb-2">
-                                <button class="btn btn-dim btn-block btn-lg sellnowBtn py-2 mt-0 font-weight-bold">SIGN UP</button>
-                                <small> Already have an account?</small><a href="{{route('login')}}" class="float-right small">Login</a>
-                            </div>
-                            <div class="col-12 text-center">
-                                <small class="font-weight-bold text-muted">--- OR ---</small>
-                            </div>
-                            <div class="col-12 text-center">
-                                <a href=""><span class="px-3 giftlink font-weight-bold">Facebook</span></i></a> 
-                                <a href=""><span class="px-3 giftlink font-weight-bold">Google</span></a>
+                {{ Form::open(array('url' => route('register'), 'method' => 'POST' )) }}
+                    <div class="row d-flex justify-content-around mb-3">
+                        <div class="col-md-5 card">
+                            <div class="row border-dark my-5">
+                                <div class="col-12 p-0 mt-0">
+                                    <p class="font-weight-bold py-2 text-center rounded"> DASCOIN <img src="{{url('logo.png')}}" class="img-fluid"> </p>
+                                </div>
+                                <div class="col-12 pt-2">
+                                    <label class="text-right small font-weight-bold" for="phone_number">PhoneNumber</label>
+                                    <input id="phone_number" name="phone_number" type="text" class="form-control rounded" required placeholder="Phone number with country code e.g +2347045554345" value="{{ old('phone_number') }}">        
+                                </div>
+                                @error('phone_number')
+                                <div class="col-12 py-0 my-0">
+                                    <small class="text-danger">{{ $message }}</small>
+                                </div>
+                                @enderror
+                                
+                                <div class="col-12 pt-2">
+                                    <label class="text-right small font-weight-bold" for="username">Username</label>
+                                    <input type="text" id="username" name="username" class="form-control rounded" required placeholder="Username" value="{{ old('username') }}">        
+                                </div>
+                                @error('username')
+                                <div class="col-12 py-0 my-0">
+                                    <small class="text-danger">{{ $message }}</small>
+                                </div>
+                                @enderror
+
+                                <div class="col-12 pt-2">
+                                    <label class="text-right small font-weight-bold" for="email">Email</label>
+                                    <input type="email" id="email" name="email" class="form-control rounded" placeholder="Email" value="{{ old('email') }}">        
+                                </div>
+                                @error('email')
+                                <div class="col-12 py-0 my-0">
+                                    <small class="text-danger">{{ $message }}</small>
+                                </div>
+                                @enderror
+
+                                <div class="col-12 pt-2">
+                                    <label class="text-right my-0 small font-weight-bold" for="password">Password</label>
+                                </div>
+                                <div class="col-12 pt-2">
+                                    <input type="password" id="password" name="password" class="form-control rounded" required placeholder="Password">
+                                </div> 
+                                @error('password')
+                                <div class="col-12 py-0 my-0">
+                                    <small class="text-danger">{{ $message }}</small>
+                                </div>
+                                @enderror
+                                
+                                <div class="col-12 pt-2">
+                                    <input type="password"  id="password" name="password_confirmation" class="form-control rounded" required placeholder="Confirm Password">
+                                </div>
+                                @error('password')
+                                <div class="col-12 py-0 my-0">
+                                    <small class="text-danger">{{ $message }}</small>
+                                </div>
+                                @enderror
+
+                                <div class="col-12 my-2">
+                                    <button class="btn btn-dim btn-block btn-lg sellnowBtn py-2 mt-0 font-weight-bold">SIGN UP</button>
+                                    <small> Already have an account?</small><a href="" data-toggle="modal" data-target="#login" class="float-right small">Login</a>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <small class="font-weight-bold text-muted">--- OR ---</small>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <a href=""><span class="px-3 giftlink font-weight-bold">Facebook</span></i></a> 
+                                    <a href=""><span class="px-3 giftlink font-weight-bold">Google</span></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                {{ Form::close() }}
             </div>
         </div>
     </div>
