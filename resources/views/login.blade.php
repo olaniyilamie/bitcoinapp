@@ -1,15 +1,15 @@
 @extends('layouts.master')
 @section('content')
-    @if (session('successful'))
+    @if (session('success'))
     <div class="alert alert-success alert-dismissible fade show mb-1 py-1" role="alert">
-        <p class="text-center">{{ session('successful') }}</p>
+        <p class="text-center font-weight-bold">{{ session('success') }}</p>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
     </div>
     @endif
 
     <div class="row d-flex justify-content-around my-5">
-        <div class="col-md-5">
-            <div class="row">
+        <div class="col-md-5 card">
+            <div class="row border-dark mb-5">
                 <div class="col-12 p-0">
                     <p class="font-weight-bold py-2 text-center rounded"> DASCOIN <img src="{{url('logo.png')}}" class="img-fluid"> </p>
                 </div>
@@ -26,7 +26,7 @@
                 </div>
                 <div class="col-12 mb-2">
                     <button class="btn btn-dim btn-block btn-lg sellnowBtn py-2 mt-0 font-weight-bold">LOGIN</button>
-                    <small> New to DasCoin ?</small><a class="float-right small">Create Account</a>
+                    <small> New to DasCoin ?</small><a data-toggle="modal" data-target="#signup" href="" class="float-right small">Create Account</a>
                 </div>
                 <div class="col-12 text-center">
                     <small class="font-weight-bold text-muted">--- OR ---</small>
