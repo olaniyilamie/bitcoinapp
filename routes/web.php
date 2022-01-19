@@ -23,6 +23,8 @@ Route::get('/', function () {
 
 //App Route
 Route::get('/login',[AppController::class,'login'])->name('login');
+Route::get('/signup',[AppController::class,'signup'])->name('signup');
+Route::post('/signup',[AppController::class,'store'])->name('register');
 
 Route::get('/bitcoins',[BitcoinController::class,'index'])->name('show_bit');
 Route::post('/sellbitcoins',[BitcoinController::class,'sellBitcoin'])->name('sellbtc');
