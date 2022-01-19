@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BitcoinController;
 use App\Http\Controllers\EthereumController;
 use App\Http\Controllers\GiftcardController;
+use App\Http\Controllers\AppController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,9 @@ use App\Http\Controllers\GiftcardController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//App Route
+Route::get('/login',[AppController::class,'login'])->name('login');
 
 Route::get('/bitcoins',[BitcoinController::class,'index'])->name('show_bit');
 Route::post('/sellbitcoins',[BitcoinController::class,'sellBitcoin'])->name('sellbtc');
