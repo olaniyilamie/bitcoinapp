@@ -28,3 +28,4 @@ Route::get('/ethereum',[EthereumController::class,'index'])->name('show_eth');
 
 //giftcard Route
 Route::get('/giftcards',[GiftcardController::class,'index'])->name('show_giftcards');
+Route::get('/giftcard_itunes',[GiftcardController::class,'giftcardItunes'])->name('itunes');
