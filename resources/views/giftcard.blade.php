@@ -10,8 +10,8 @@
         <div class="col-4 col-md-2">
             <div class="row">
                 <div class="col-12 text-center">
-                    <a><img src="{{url('itunes.png')}}" class="img-fluid py-3"></a>
-                    <small class="font-weight-bold text-muted">ITUNES</small>
+                    <a href="{{route('itunes')}}"><img src="{{url('itunes.png')}}" class="img-fluid py-3"></a>
+                    <a href="{{route('itunes')}}"><small class="font-weight-bold text-muted giftlink">ITUNES</small></a>
                 </div>
             </div>
         </div>
