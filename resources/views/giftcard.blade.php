@@ -10,144 +10,144 @@
         <div class="col-4 col-md-2">
             <div class="row">
                 <div class="col-12 text-center">
-                    <a href="{{route('itunes')}}"><img src="{{url('itunes.png')}}" class="img-fluid py-3"></a>
-                    <a href="{{route('itunes')}}"><small class="font-weight-bold text-muted giftlink">ITUNES</small></a>
+                    <a href="{{route('itune')}}"><img src="{{url('itunes.png')}}" class="img-fluid py-3"></a>
+                    <a href="{{route('itune')}}"><small class="font-weight-bold d-block text-muted giftlink">ITUNES</small></a>
                 </div>
             </div>
         </div>
         <div class="col-4 col-md-2">
             <div class="row">
                 <div class="col-12 text-center">
-                    <a><img src="{{url('googleplay.png')}}" class="img-fluid py-3"></a>
-                    <small class="font-weight-bold text-muted">GOOGLEPLAY</small>
+                    <a href="{{route('googleplay')}}"><img src="{{url('googleplay.png')}}" class="img-fluid py-3"></a>
+                    <a href="{{route('googleplay')}}"><small class="font-weight-bold text-muted d-block">GOOGLEPLAY</small></a>
                 </div>
             </div>
         </div>
         <div class="col-4 col-md-2">
             <div class="row">
                 <div class="col-12 text-center">
-                    <a><img src="{{url('steam.png')}}" class="img-fluid py-3"></a>
-                    <small class="font-weight-bold text-muted">STEAM</small>
+                    <a href="{{route('steam')}}"><img src="{{url('steam.png')}}" class="img-fluid py-3"></a>
+                    <a href="{{route('steam')}}"><small class="font-weight-bold text-muted d-block">STEAM</small></a>
                 </div>
             </div>
         </div>
         <div class="col-4 col-md-2">
             <div class="row">
                 <div class="col-12 text-center">
-                    <a><img src="{{url('applepay.png')}}" class="img-fluid py-3"></a>
-                    <small class="font-weight-bold text-muted">APPLE</small>
+                    <a href="{{route('apple')}}"><img src="{{url('applepay.png')}}" class="img-fluid py-3"></a>
+                    <a href="{{route('apple')}}"><small class="font-weight-bold text-muted giftlink d-block">APPLE</small></a>
                 </div>
             </div>
         </div>
         <div class="col-4 col-md-2">
             <div class="row">
                 <div class="col-12 text-center">
-                    <a><img src="{{url('sephora.png')}}" class="img-fluid py-3"></a>
-                    <small class="font-weight-bold text-muted">SEPHORA</small>
+                    <a href="{{route('other2')}}"><img src="{{url('sephora.png')}}" class="img-fluid py-3"></a>
+                    <a href={{route('other2')}}""><small class="font-weight-bold text-muted d-block giftlink">SEPHORA</small></a>
                 </div>
             </div>
         </div>
         <div class="col-4 col-md-2">
             <div class="row">
                 <div class="col-12 text-center">
-                    <a><img src="{{url('nordstrom.jpg')}}" class="img-fluid py-3"></a>
-                    <small class="font-weight-bold text-muted">NORDSTROM</small>
+                    <a href="{{route('other2')}}"><img src="{{url('nordstrom.jpg')}}" class="img-fluid py-3"></a>
+                    <a href="{{route('other2')}}"><small class="font-weight-bold text-muted d-block giftlink">NORDSTROM</small></a>
                 </div>
             </div>
         </div>
         <div class="col-4 col-md-2">
             <div class="row">
                 <div class="col-12 text-center">
-                    <a><img src="{{url('ebay.png')}}" class="img-fluid py-3"></a>
-                    <small class="font-weight-bold text-muted">EBAY</small>
+                    <a href="{{route('other')}}"><img src="{{url('ebay.png')}}" class="img-fluid py-3"></a>
+                    <a href="{{route('other')}}"><small class="font-weight-bold text-muted d-block giftlink">EBAY</small></a>
                 </div>
             </div>
         </div>
         <div class="col-4 col-md-2">
             <div class="row">
                 <div class="col-12 text-center">
-                    <a><img src="{{url('walmart.png')}}" class="img-fluid py-3"></a>
-                    <small class="font-weight-bold text-muted">WALMART</small>
+                    <a href="{{route('other')}}"><img src="{{url('walmart.png')}}" class="img-fluid py-3"></a>
+                    <a href="{{route('other')}}"><small class="font-weight-bold text-muted d-block giftlink">WALMART</small></a>
                 </div>
             </div>
         </div>
         <div class="col-4 col-md-2">
             <div class="row">
                 <div class="col-12 text-center">
-                    <a><img src="{{url('nike.png')}}" class="img-fluid py-3"></a>
-                    <small class="font-weight-bold text-muted">NIKE</small>
+                    <a href="{{route('other2')}}"><img src="{{url('nike.png')}}" class="img-fluid py-3"></a>
+                    <a href="{{route('other2')}}"><small class="font-weight-bold text-muted d-block giftlink">NIKE</small></a>
                 </div>
             </div>
         </div>
         <div class="col-4 col-md-2">
             <div class="row">
                 <div class="col-12 text-center">
-                    <a><img src="{{url('amex.png')}}" class="img-fluid py-3"></a>
-                    <small class="font-weight-bold text-muted">AMEX</small>
+                    <a href="{{route('other')}}"><img src="{{url('amex.png')}}" class="img-fluid py-3"></a>
+                    <a href="{{route('other')}}"><small class="font-weight-bold text-muted d-block giftlink">AMEX</small></a>
                 </div>
             </div>
         </div>
         <div class="col-4 col-md-2">
             <div class="row">
                 <div class="col-12 text-center">
-                    <a><img src="{{url('visa.png')}}" class="img-fluid py-3"></a>
-                    <small class="font-weight-bold text-muted">VISA</small>
+                    <a href="{{route('other')}}"><img src="{{url('visa.png')}}" class="img-fluid py-3"></a>
+                    <a href="{{route('other')}}"><small class="font-weight-bold text-muted d-block giftlink">VISA</small></a>
                 </div>
             </div>
         </div>
         <div class="col-4 col-md-2">
             <div class="row">
                 <div class="col-12 text-center">
-                    <a><img src="{{url('footlocker.jpg')}}" class="img-fluid py-3"></a>
-                    <small class="font-weight-bold text-muted">FOOT LOCKER</small>
+                    <a href="{{route('other2')}}"><img src="{{url('footlocker.jpg')}}" class="img-fluid py-3"></a>
+                    <a href="{{route('other2')}}"><small class="font-weight-bold text-muted d-block giftlink">FOOT LOCKER</small></a>
                 </div>
             </div>
         </div>
         <div class="col-4 col-md-2">
             <div class="row">
                 <div class="col-12 text-center">
-                    <a><img src="{{url('macy.png')}}" class="img-fluid py-3"></a>
-                    <small class="font-weight-bold text-muted">MACY</small>
+                    <a href="{{route('other')}}"><img src="{{url('macy.png')}}" class="img-fluid py-3"></a>
+                    <a href="{{route('other')}}"><small class="font-weight-bold text-muted d-block giftlink">MACY</small></a>
                 </div>
             </div>
         </div>
         <div class="col-4 col-md-2">
             <div class="row">
                 <div class="col-12 text-center">
-                    <a><img src="{{url('razer.png')}}" class="img-fluid py-3"></a>
-                    <small class="font-weight-bold text-muted">RAZER GOLD</small>
+                    <a href="{{route('other2')}}"><img src="{{url('razer.png')}}" class="img-fluid py-3"></a>
+                    <a href="{{route('other2')}}"><small class="font-weight-bold text-muted d-block giftlink">RAZER GOLD</small></a>
                 </div>
             </div>
         </div>
         <div class="col-4 col-md-2">
             <div class="row">
                 <div class="col-12 text-center">
-                    <a><img src="{{url('vanilla.jfif')}}" class="img-fluid py-3"></a>
-                    <small class="font-weight-bold text-muted">VANILLA</small>
+                    <a href="{{route('other')}}"><img src="{{url('vanilla.jfif')}}" class="img-fluid py-3"></a>
+                    <a href="{{route('other')}}"><small class="font-weight-bold text-muted d-block giftlink">VANILLA</small></a>
                 </div>
             </div>
         </div>
         <div class="col-4 col-md-2">
             <div class="row">
                 <div class="col-12 text-center">
-                    <a><img src="{{url('gamestop.png')}}" class="img-fluid py-3"></a>
-                    <small class="font-weight-bold text-muted">GAMESTOP</small>
+                    <a href=""><img src="{{url('gamestop.png')}}" class="img-fluid py-3"></a>
+                    <a href=""><small class="font-weight-bold text-muted d-block giftlink">GAMESTOP</small></a>
                 </div>
             </div>
         </div>
         <div class="col-4 col-md-2">
             <div class="row">
                 <div class="col-12 text-center">
-                    <a><img src="{{url('target.jpg')}}" class="img-fluid py-3"></a>
-                    <small class="font-weight-bold text-muted">TARGET</small>
+                    <a href=""><img src="{{url('target.jpg')}}" class="img-fluid py-3"></a>
+                    <a href=""><small class="font-weight-bold text-muted d-block giftlink">TARGET</small></a>
                 </div>
             </div>
         </div>
         <div class="col-4 col-md-2">
             <div class="row">
                 <div class="col-12 text-center">
-                    <a><img src="{{url('convert.png')}}" class="img-fluid py-3"></a>
-                    <small class="font-weight-bold text-muted">AIRTIME 2 CASH</small>
+                    <a href=""><img src="{{url('convert.png')}}" class="img-fluid py-3"></a>
+                    <a href=""><small class="font-weight-bold text-muted d-block giftlink">AIRTIME 2 CASH</small></a>
                 </div>
             </div>
         </div>
@@ -160,7 +160,7 @@
             </p>
             <p>
                 Welcome to <b>DasCoins</b>, Nigeria’s No. 1 Gift Card Exchanger. DasCoins helps you convert your <a href="">Itunes</a> gift 
-                card, <a href="">Steam cards</a>,<a href=""> Google Play</a>, <a href="">Amazon</a>, <a href="">etc</a>. gift cards to Naira or bitcoins. Our staffs 
+                card, <a href="{{route('steam')}}">Steam cards</a>,<a href="{{route('googleplay')}}"> Google Play</a>, <a href="">Amazon</a>, <a href="">etc</a>. gift cards to Naira or bitcoins. Our staffs 
                 are always available 24/7 to attend to your orders. We accept legitimately purchased Usa, Uk, Austaralian 
                 and Canadian itunes gift card, Steam cards, Googleplay, Best buy, Sephora gift cards, etc. in exchange for cash.
             </p>
