@@ -155,8 +155,15 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 input-group">
-                <input type="submit" name="submit" value="SELL NOW" class="btn btn-sm btn-dark btn-block my-2 font-weight-bold sellnowBtn">
+            <div class="col-12 text-center">
+                @if (Auth::check())
+                    <input type="submit" name="submit" value="SELL NOW" class="btn btn-sm sellnowBtn btn-block my-2 font-weight-bold">
+                @else
+                    <p class="font-weight-bold my-2">Click here to 
+                        <a class="text-dark btn btn-outline-dark py-0" data-toggle="modal" data-target="#login">LOGIN</a> or
+                        <a class="text-dark btn btn-outline-dark py-0" data-toggle="modal" data-target="#register">REGISTER</a> to Submit your order.
+                    </p>
+                @endif
             </div>
             <div class="col-12">
                 <p><b>Note: ₦30 bank transfer charge will be deducted.</b> We won't be held responsible for funding a wrong <b>Account Number</b> provided by you. Pls crosscheck the info you filled.
