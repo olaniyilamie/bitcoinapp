@@ -23,52 +23,76 @@
                 <div class="col-12">
                     <ul class="px-0 py-0">
                         <li class="giftcardType">
-                            <input name="gt_itunes" type="radio" value="USA_($100-$200)_387" checked="checked" id="itunes_usa100-200">
-                            <label for="itunes_usa100-200">USA iTunes card($100-$200 single) <span class="amount">₦387</span></label>
+                            <label for="0"> 
+                                <input name="gt_itunes" type="radio" value="0" checked="checked" id="0">
+                                USA iTunes card($100-$200 single) ₦387
+                            </label>
                         </li>
                         <li class="giftcardType">
-                            <input name="gt_itunes" type="radio" value="USA_($50 single)_387" id="itunes_usa50">
-                            <label for="itunes_usa50">USA iTunes card($50 USA iTunes ($50 single) <span class="amount">₦387</span></label>
+                            <label for="1">
+                                <input name="gt_itunes" type="radio" value="1" id="1">
+                                USA iTunes card($50 USA iTunes ($50 single) ₦387
+                            </label>
                         </li>
                         <li class="giftcardType">
-                            <input name="gt_itunes" type="radio" value="USA_($300-$2,000)_387" id="itunes_usa300-2000">
-                            <label for="itunes_usa300-2000">USA iTunes ($300-$2,000 single) <span class="amount">₦387</span></label>
+                            <label for="2">
+                                <input name="gt_itunes" type="radio" value="2" id="2">
+                                USA iTunes ($300-$2,000 single) ₦387
+                            </label>
                         </li>
                         <li class="giftcardType">
-                            <input name="gt_itunes" type="radio" value="USA_<$100_230" id="itunes_usa100-230">
-                            <label for="itunes_usa100-230">USA iTunes(Others e.g $25, $75, $65, etc) <span class="amount">₦230</span></label>
+                            <label for="3">
+                                <input name="gt_itunes" type="radio" value="3" id="3">
+                                USA iTunes(Others e.g $25, $75, $65, etc) ₦230
+                            </label>
                         </li>
                         <li class="giftcardType">
-                            <input name="gt_itunes" type="radio" value="CAD_248" id="itunes_cad">
-                            <label for="itunes_cad">CADiTunes <span class="amount">₦248</span></label>
+                            <label for="4">
+                                <input name="gt_itunes" type="radio" value="4" id="4">
+                                CADiTunes ₦248
+                            </label>
                         </li>
                         <li class="giftcardType">
-                            <input name="gt_itunes" type="radio" value="AUD_296" id="itunes_aud">
-                            <label for="itunes_aud">AUD Itunes <span class="amount">₦295</span></label>
+                            <label for="5">
+                                <input name="gt_itunes" type="radio" value="5" id="5">
+                                AUD Itunes ₦295
+                            </label>
                         </li>
                         <li class="giftcardType">
-                            <input name="gt_itunes" type="radio" value="NZD_267" id="itunes_nzd">
-                            <label for="itunes_nzd">NZD iTunes <span class="amount">₦267</span></label>
+                            <label for="6">
+                                <input name="gt_itunes" type="radio" value="6" id="6">
+                                NZD iTunes ₦267
+                            </label>
                         </li>
                         <li class="giftcardType">
-                            <input name="gt_itunes" type="radio" value="USA_(100-200)_368" id="itunes_usa100-200">
-                            <label for="itunes_usa100-200">USA iTunes Ecode(100-200) <span class="amount">₦368</span></label>
+                            <label for="7">
+                                <input name="gt_itunes" type="radio" value="7" id="7">
+                                USA iTunes Ecode(100-200) ₦368
+                            </label>
                         </li>
                         <li class="giftcardType">
-                            <input name="gt_itunes" type="radio" value="USA_(50)_368" id="itunes_usa50">
-                            <label for="itunes_usa50">USA iTunes Ecode(50) <span class="amount">₦368</span></label>
+                            <label for="8">
+                                <input name="gt_itunes" type="radio" value="8" id="8">
+                                USA iTunes Ecode(50) ₦368
+                            </label>
                         </li>
                         <li class="giftcardType">
-                            <input name="gt_itunes" type="radio" value="EURO_379" id="itunes_euro">
-                            <label for="itunes_euro">EURO iTunes <span class="amount">₦379</span></label>
+                            <label for="9">
+                                <input name="gt_itunes" type="radio" value="9" id="9">
+                                EURO iTunes ₦379
+                            </label>
                         </li>
                         <li class="giftcardType">
-                            <input name="gt_itunes" type="radio" value="Uk_497" id="itunes_uk">
-                            <label for="itunes_uk">Uk iTunes <span class="amount">₦497</span></label>
+                            <label for="10">
+                                <input name="gt_itunes" type="radio" value="10" id="10">
+                                Uk iTunes ₦497
+                            </label>
                         </li>
                         <li class="giftcardType">
-                            <input name="gt_itunes" type="radio" value="CHF_511" id="itunes_chf">
-                            <label for="itunes_chf">CHF iTunes <span class="amount">₦511</span></label>
+                            <label for="11">
+                                <input name="gt_itunes" type="radio" value="11" id="11">
+                                CHF iTunes ₦511
+                            </label>
                         </li>
                     </ul>
                 </div>
@@ -149,8 +173,15 @@
                 </div>
             </div>
         </div>
-        <div class="col-12">
-            <input type="submit" name="submit" value="SELL NOW" class="btn btn-sm sellnowBtn btn-block my-2 font-weight-bold">
+        <div class="col-12 text-center">
+            @if (Auth::check())
+                <input type="submit" name="submit" value="SELL NOW" class="btn btn-sm sellnowBtn btn-block my-2 font-weight-bold">
+            @else
+                <p class="font-weight-bold my-2">Click here to 
+                    <a class="text-dark btn btn-outline-dark py-0" data-toggle="modal" data-target="#login">LOGIN</a> or
+                    <a class="text-dark btn btn-outline-dark py-0" data-toggle="modal" data-target="#register">REGISTER</a> to Submit your order.
+                </p>
+            @endif
         </div>
     </div>
 {{ Form:: close()}}
@@ -162,42 +193,52 @@
 
 <script type="text/javascript">
     $(document).ready(function(){
-        $("#quantity").keyup("input", function(){
-            let checked=$("input[name='gt_itunes']:checked").siblings().children('.amount').html();
-            let itunesRate=checked.substring(1);
-                if($(this).val() < 50 ){
-                    $('#qtyMsg').html('quantity cannot be less than 50');
-                    $('#qtyMsg').removeClass('text-muted');
-                    $('#qtyMsg').addClass('text-danger');
-                    let itunesValue=$(this).val();
-                    let toReceive = itunesValue * itunesRate;
-                    $('#toReceive').val(toReceive);
-                }else if($(this).val() > 2000){
-                    $('#qtyMsg').html('quantity cannot be greater than 2000');
-                    $('#qtyMsg').removeClass('text-muted');
-                    $('#qtyMsg').addClass('text-danger');
-                    let itunesValue=$(this).val();
-                    let toReceive = itunesValue * itunesRate;
-                    $('#toReceive').val(toReceive);
-                }else{
-                    $('#qtyMsg').html('Please enter a number from 50 to 2000');
-                    $('#qtyMsg').addClass('text-muted');
-                    let itunesValue=$(this).val();
-                    let toReceive = itunesValue * itunesRate;
-                    $('#toReceive').val(toReceive);
+        $("input[type=radio][name=gt_itunes]").on("change", itunesPrice );
+        $("#quantity").on("keyup", itunesPrice );
 
+        function itunesPrice(){
+            let checked=$("input[name='gt_itunes']:checked").val();
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name=csrf-token]').attr('content')
+                    },
+                url:"{{route('get_itune_price')}}",
+                type:'POST',
+                data:{'key': checked },
+                dataType:'text',
+                success:function(itunesRate){
+                    console.log('here');
+                    if($('#quantity').val() !=='' && $('#quantity').val() < 50 ){
+                        $('#qtyMsg').html('quantity cannot be less than 50');
+                        $('#qtyMsg').removeClass('text-muted');
+                        $('#qtyMsg').addClass('text-danger');
+                        let itunesValue=$('#quantity').val();
+                        let toReceive = itunesValue * itunesRate;
+                        $('#toReceive').val(toReceive);
+                        $('.sellnowBtn').prop('disabled', true);
+                    }else if($('#quantity').val() !=='' && $('#quantity').val() > 2000){
+                        $('#qtyMsg').html('quantity cannot be greater than 2000');
+                        $('#qtyMsg').removeClass('text-muted');
+                        $('#qtyMsg').addClass('text-danger');
+                        let itunesValue=$('#quantity').val();
+                        let toReceive = itunesValue * itunesRate;
+                        $('#toReceive').val(toReceive);
+                        $('.sellnowBtn').prop('disabled', true);
+                    }else{
+                        $('#qtyMsg').html('Please enter a number from 50 to 2000');
+                        $('#qtyMsg').addClass('text-muted');
+                        let itunesValue=$('#quantity').val();
+                        let toReceive = itunesValue * itunesRate;
+                        $('#toReceive').val(toReceive);
+                        $('.sellnowBtn').prop('disabled', false);
+                    }
+                    console.log('here now');
+                },
+                error:function(error){
+                    console.log(error);
                 }
-        })
-
-        
-        $("input[type=radio][name=gt_itunes]").change(function() {
-            let checked=$("input[name='gt_itunes']:checked").siblings().children('.amount').html();
-            let itunesRate=checked.substring(1);
-            let itunesValue=$('#quantity').val();
-            let toReceive = itunesValue * itunesRate;
-            $('#toReceive').val(toReceive);
-
-        });
+            })
+        }
 
         $("#evidence").change(function(event) {
             $('#preview').html('');
