@@ -165,8 +165,14 @@ return [
     */
 
     'attributes' => [
+        'f_name' => 'first name',
+        'l_name' => 'last name',
+        'phone_number' => 'phone number',
         'bitcoinQty' => 'bitcoin quantity',
-        'sendfrom' => 'send from'
+        'sendfrom' => 'send from',
+        'fname' => 'first name',
+        'lname' => 'last name',
+        'phonenumber' => 'phone number',
     ],
 
 ];
