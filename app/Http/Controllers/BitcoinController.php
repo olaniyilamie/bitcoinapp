@@ -13,11 +13,11 @@ class BitcoinController extends Controller
 
     public function sellBitcoin(Request $req){
         
-        $bitcoin = $req->old('bitcoin');    
+        $bitcoin = $req->old('bitcoin');
         $sendfrom = $req->old('sendfrom');
-        $bitcoinQty = $req->old('bitcoinQty');                
+        $bitcoinQty = $req->old('bitcoinQty');
         $toReceive = $req->old('toReceive');
-        $sendQty = $req->old('sendQty');                   
+        $sendQty = $req->old('sendQty');
 
         $req->validate([
             'bitcoin' => 'required',
@@ -27,13 +27,13 @@ class BitcoinController extends Controller
         ]);
 
         
-        $apiKey = 'po3Utcn9jJi5JYVNYAT8ZyQ09rXp46xC'; // specify
-        $apiSecret = 'lobkZLhTyPYVJ9QE4oxmEhQ6l3zQctUH'; // specify
+        $apiKey = env('PAXFUL_API_KEY');
+        $apiSecret = env('PAXFUL_SECRET_KEY');
         $queryParams = [
-            'merchant' => 'wBLYgx1DkR9', // replace
+            'merchant' => env('PAXFUL_MERCHANT_ID'),
             'apikey' => $apiKey,
             'nonce' => time(),
-            'to' => '386UpLvX7mpBTT8YD2xwCGQdHh6pnb85VX', // replace!
+            'to' => env('PAXFUL_WALLET_ADDRESS'), // replace!
             'track_id' => 'dascoin'.sha1(time()),
             'amount' => $bitcoinQty
         ];
