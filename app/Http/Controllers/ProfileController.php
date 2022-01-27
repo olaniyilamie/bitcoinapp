@@ -50,22 +50,20 @@ class ProfileController extends Controller
             $req->old('username');                
             $req->old('phonenumber');
             $req->old('email');
-
-            // $validate=$req->validate([
-            //                     'f_name' => 'required|string|max:20|min:3',
-            //                     'l_name' => 'required|string|max:20|min:3',
-            //                     'username' => 'required|string|unique:users,username|max:12',
-            //                     'phone_number' => 'required|unique:users,phone_number|max:25',
-            //                     'email' => 'required|string|max:255|email|unique:users,email',
-            //                 ]);
+            
+            $dbL_name=User::where('id',$id)->value('f_name');
+            $dbF_name=User::where('id',$id)->value('l_name');
+            $dbUsername=User::where('id',$id)->value('username');
+            $dbEmail=User::where('id',$id)->value('email');
+            $dbPhonenumber=User::where('id',$id)->value('phonenumber');
             
             $validate = Validator::make($req->all(), [
-                        'fname' => ['required', 'string', 'max:20', 'min:3'],
-                        'lname' => ['required', 'string', 'max:20', 'min:3'],
-                        'username' => ['required', 'string', 'unique:users,username', 'max:12'],
-                        'phonenumber' => ['required', 'unique:users,phone_number', 'max:25'],
-                        'email' => ['required', 'string', 'max:255', 'email', 'unique:users,email'],
-                    ]);
+                'fname' => ['required', 'string', 'max:20', 'min:3'],
+                'lname' => ['required', 'string', 'max:20', 'min:3'],
+                'username' => ['required', 'string', 'unique:users,username', 'max:12'],
+                'phonenumber' => ['required', 'unique:users,phone_number', 'max:25'],
+                'email' => ['required', 'string', 'max:255', 'email', 'unique:users,email'],
+            ]);
 
 
             if ($validate->fails()){
