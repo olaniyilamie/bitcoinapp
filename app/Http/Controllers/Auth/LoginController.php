@@ -39,6 +39,15 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+    public function showLoginForm(){
+        // if(!session()->has('url.intended'))
+        // {
+        //     session(['url.intended' => url()->previous()]);
+        // }
+        
+        return view('auth.login');
+    }
+
     public function login(Request $req){   
         $req->old('username');
 
@@ -51,12 +60,12 @@ class LoginController extends Controller
         $fieldType = filter_var($req->email, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
 
         if(auth()->attempt(array($fieldType => $input['username'], 'password' => $input['password']))){
-            return redirect()->route('home');
+            return redirect()->url()->previous();
         }else{
             return redirect()->route('login')->with('error','These credentials do not match our records.');
         }
 
           
 
-    }
+   }
 }
