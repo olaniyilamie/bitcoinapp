@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Bankdetail;
+use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
 
@@ -8,6 +10,7 @@ class GiftcardController extends Controller
 {
     //
     public function index(){
+        
         return view('giftcard');
     }
 
@@ -46,11 +49,25 @@ class GiftcardController extends Controller
     }
 
     public function giftcardItunes(){
-        return view('giftcard_itunes');
+        $account = 0;
+        if(Auth::check()){
+            $account = 1;
+            $id = Auth::id();
+            $userAccount = Bankdetail::where('user_id',$id)->get();            
+            return view('giftcard_itunes',compact('userAccount','account'));
+        }
+        return view('giftcard_itunes',compact('account'));
     }
 
     public function giftcardApple(){
-        return view('giftcard_apple');
+        $account = 0;
+        if(Auth::check()){
+            $account = 1;
+            $id = Auth::id();
+            $userAccount = Bankdetail::where('user_id',$id)->get();            
+            return view('giftcard_apple',compact('userAccount','account'));
+        }
+        return view('giftcard_apple',compact('account'));
     }
 
     protected function applePayType(Request $req){
@@ -70,7 +87,14 @@ class GiftcardController extends Controller
 
     // this function will return the view of other type of gift card like ebay,amex,macy and vanilla
     public function giftcardOther(){
-        return view('giftcard_others');
+        $account = 0;
+        if(Auth::check()){
+            $account = 1;
+            $id = Auth::id();
+            $userAccount = Bankdetail::where('user_id',$id)->get();            
+            return view('giftcard_others',compact('userAccount','account'));
+        }
+        return view('giftcard_others',compact('account'));
     }
 
     protected function otherCardType(Request $req){
@@ -109,7 +133,14 @@ class GiftcardController extends Controller
     }
 
     public function giftcardGoogleplay(){
-        return view('giftcard_googleplay');
+        $account = 0;
+        if(Auth::check()){
+            $account = 1;
+            $id = Auth::id();
+            $userAccount = Bankdetail::where('user_id',$id)->get();            
+            return view('giftcard_googleplay',compact('userAccount','account'));
+        }
+        return view('giftcard_googleplay',compact('account'));
     }
 
     protected function googleplayCardType(Request $req){
@@ -141,7 +172,14 @@ class GiftcardController extends Controller
     }
 
     public function giftcardOther2(){
-        return view('giftcard_others2');
+        $account = 0;
+        if(Auth::check()){
+            $account = 1;
+            $id = Auth::id();
+            $userAccount = Bankdetail::where('user_id',$id)->get();            
+            return view('giftcard_others2',compact('userAccount','account'));
+        }
+        return view('giftcard_others2',compact('account'));
     }
 
     protected function other2CardType(Request $req){
@@ -176,7 +214,14 @@ class GiftcardController extends Controller
     }
 
     public function giftcardSteam(){
-        return view('giftcard_steam');
+        $account = 0;
+        if(Auth::check()){
+            $account = 1;
+            $id = Auth::id();
+            $userAccount = Bankdetail::where('user_id',$id)->get();            
+            return view('giftcard_steam',compact('userAccount','account'));
+        }
+        return view('giftcard_steam',compact('account'));
     }
 
     protected function steamCardType(Request $req){
