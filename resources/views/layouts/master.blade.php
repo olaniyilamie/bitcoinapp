@@ -23,7 +23,7 @@
             <link rel="stylesheet" href="{{ asset('appcss.css') }}">
         </head>
         <body>
-            <nav class="navbar navbar-expand-lg navbar-light p-0 nav-bg ">
+            <nav class="navbar navbar-expand-lg navbar-light p-0 nav-bg">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">
                         <img src="{{url('biglogo.png')}}" class="img"><span>DasCoins</span>
@@ -73,14 +73,10 @@
                                     <li><a class="dropdown-item" href="#">Steam</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('contact_us_form')}}">
                                 Contact Us
                                 </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#"><i class="fas fa-envelope-open mx-2"></i><span>info@dascoin.com</span></a></li>
-                                    <li><a class="dropdown-item" href="#"> <i class="fas fa-phone-alt mx-2"></i><span>+2347000001234<span></a></li>
-                                </ul>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Blog</a>
@@ -135,38 +131,67 @@
                 </div>
             </nav>
             <div class="container-fluid">
-                @yield('content')
-                <footer class="row d-flex justify-content-between py-3" id="footer">
-                    <div class="col-6 text-center">
-                        <img src="{{url('biglogo.png')}}" class="img"><h2 class="d-inline-block">DasCoins</h2>
-                        <p>We are a Digital Currency Exchange Company committed in providing seamless and easy trading experience
-                         with fast payout. We offer best Market rates and a nice user interface for comfortability.</p>
-                         <p class="font-weight-bolder">
-                            <a href="" target="_blank" class="links"><i class="fab fa-facebook-square"></i></a>
-                            <a href="" target="_blank" class="links"><i class="fab fa-twitter-square"></i></a>
-                            <a href="" target="_blank" class="links"><i class="fab fa-instagram"></i></a>
-                         </p>
+                <div  class="content_height">
+                    @yield('content')
+                </div>
+                <footer>
+                    <div class="row d-flex justify-content-between pt-3" id="footer">
+                        <div class="col-12">
+                            <div class="row  text-center">
+                                <div class="col-3 my-auto">
+                                    <div class="row align-items-center">
+                                        <div class="col-12 px-0">
+                                            <img src="{{url('biglogo.png')}}" class="img_fluid">
+                                            <p class="d-sm-block d-md-inline font-weight-bold text-center">DasCoins</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-md-6 px-1">
+                                                    <p class="font-weight-bold small text-center">QUICK LINKS</p>
+                                                    <ul class="ullink">
+                                                        <li><a href="" class="footer_ullink px-2 btn btn-sm footer_link_btn my-1 my-md-1">Home</a></li>
+                                                        <li><a href="{{route('show_bit')}}" class="footer_ullink px-2 btn btn-sm footer_link_btn">Bitcoins</a></li>
+                                                        <li><a href="{{route('show_eth')}}" class="footer_ullink px-2 btn btn-sm footer_link_btn">Ethereum</a></li>
+                                                        <li><a href="{{route('apple')}}" class="footer_ullink px-2 btn btn-sm footer_link_btn">Apple</a></li>
+                                                        <li><a href="" class="footer_ullink px-2 btn btn-sm footer_link_btn">Itunes</a></li>
+                                                        <li><a href="{{route('send_contact_form')}}" class="footer_ullink px-2 btn btn-sm footer_link_btn">Blog</a></li>
+                                                        @guest  
+                                                        <li><a href="{{route('send_contact_form')}}" class="footer_ullink px-2 btn btn-sm footer_link_btn">Login </a></li>
+                                                        <li><a href="{{route('send_contact_form')}}" class="footer_ullink px-2 btn btn-sm footer_link_btn">Sign up </a></li>
+                                                        @else
+                                                        <li><a href="{{route('user_profile')}}" class="footer_ullink px-2 btn btn-sm footer_link_btn">{{ ucfirst(Auth::user()->username) }} <i class="fas fa-user px-2"></i></a></li>
+                                                        @endguest
+                                                    </ul>                                                                                
+                                                </div>
+                                                <div class="col-md-6 p-1">
+                                                    <p class="font-weight-bold small text-center mt-3 mb-1 mt-md-0 mb-md-3">GET IN TOUCH</p>
+                                                    <p class="small d-inline-block px-2 my-1"><i class="fas fa-envelope-open-text"></i> dascoin@bitcoin.com</p>
+                                                    <p class="small d-inline-block px-2 my-1"><i class="fab fa-whatsapp"> <a href="" class="text-light small">Send a message</a></i></p>                                                
+                                                    <p class="small d-inline-block px-2 my-1"><i class="fas fa-phone"></i> +234901-999-888-3242</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                
+                        <div class="col-12 text-center shadow-lg">
+                            <div class="row">
+                                <div class="col-12 text-center px-0">
+                                    <hr class="border-top-2 border-white mt-2 mb-0 my-md-0">                             
+                                </div>
+                                <div class="col-12 text-center"  style="background-color: rgb(22, 26, 56)">
+                                    <p class="small m-0 pt-3 pb-1">We are a Digital Currency Exchange Company committed in providing seamless and easy trading experience
+                                    with fast payout. We offer best Market rates and a nice user interface for comfortability.
+                                    </p>                                 
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-3">
-                        <h3>Quick Links</h3>
-                        <ul class="ullink">
-                            <li><a href="" class="ullink">Home</a></li>
-                            <li><a href="" class="ullink">Bitcoins</a></li>
-                            <li><a href="" class="ullink">Ethereum</a></li>
-                            <li><a href="" class="ullink">Apple</a></li>
-                            <li><a href="" class="ullink">Itunes</a></li>
-                            <li><a href="" class="ullink">Blog</a></li>
-                            <li><a href="" class="ullink">Login </a></li>
-                            <li><a href="" class="ullink">Sign up </a></li>
-                        </ul>
-                    </div>
-                    <div class="col-3">
-                        <h3 class="pb-4">Get in Touch</h3>
-                        <p><i class="fas fa-phone"></i> +234901-999-888-3242</p>
-                        <p><i class="fas fa-envelope-open-text"></i> dascoin@bitcoin.com</p>
-                        <p><i class="fab fa-whatsapp"> <a href="" class="text-light">Send a message</a></i></p>
-                    </div>
-                    <hr>
                 </footer>
             </div>
 
