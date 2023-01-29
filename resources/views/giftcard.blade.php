@@ -159,7 +159,7 @@
                 Best buy, Google play, Gamestop, etc.)  to cash(Naira or Bitcoins)? Look no more.
             </p>
             <p>
-                Welcome to <b>DasCoins</b>, Nigeria’s No. 1 Gift Card Exchanger. DasCoins helps you convert your <a href="">Itunes</a> gift 
+                Welcome to <b>DasCoins</b>, Nigeria’s No. 1 Gift Card Exchanger. DasCoins helps you convert your <a href="{{route('itune')}}">Itunes</a> gift 
                 card, <a href="{{route('steam')}}">Steam cards</a>,<a href="{{route('googleplay')}}"> Google Play</a>, <a href="">Amazon</a>, <a href="">etc</a>. gift cards to Naira or bitcoins. Our staffs 
                 are always available 24/7 to attend to your orders. We accept legitimately purchased Usa, Uk, Austaralian 
                 and Canadian itunes gift card, Steam cards, Googleplay, Best buy, Sephora gift cards, etc. in exchange for cash.
