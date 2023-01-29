@@ -85,11 +85,18 @@
                         </div>
 
                         <div class="col-12 form-group{{ $errors->has('bank_details') ? ' has-error' : '' }}">
-                            <select name="bank_details" id="" class="form-control form-control-sm text-center" required>
-                                <option> --Select Account-- </option>
-                                <option value="">--Select Account--</option>
+                            <select name="bank_details" id="bank_details" class="form-control form-control-sm font-weight-bold" required>
+                                <option> Select Account </option>
+                                @if($account == 1){
+                                    @foreach($userAccount as $account_details)
+                                        <option value="{{$account_details->id}}">{{$account_details->acc_name}}  {{$account_details->bank_name}} (<span class="font-weight-bold">{{$account_details->acc_number}}</span>)</option>
+                                    @endforeach
+                                }
+                                @else
+                                <option value="guest">Add a new bank detail</option>
+                                @endif
                             </select>
-                            <small><a href="" class="btn btn-sm btn-outline-primary py-0" >Add a new bank detail</a></small>
+                            <small><a href="@guest{{route('login')}}@else{{route('user_profile')}}@endguest" class="btn btn-sm btn-outline-primary py-0" >Add a new bank detail</a></small>
                             @error('bank_details')<small class="text-danger">{{ $errors->first('bank_details') }}</small>@enderror
                         </div>
                     </div>
@@ -236,7 +243,12 @@
            
         })
         
-
+        $('#bank_details').change(function(){
+                if($(this).val() == 'guest'){
+                    let url = "{{route('login')}}"
+                    window.location.replace(url);
+                }
+            })
 
     })
 </script>
