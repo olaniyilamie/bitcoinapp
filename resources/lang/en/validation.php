@@ -142,10 +142,16 @@ return [
 
     'custom' => [
         'sendfrom'=>[
-            'required' => 'Please select the account the bitcoin will be deducted from',
+            'required' => 'Please select the account the bitcoin will be deducted from.',
         ],
         'toReceive'=>[
-            'required' => 'The amount to be received will be calculated based on the bitcoin quantity, so input the quantity',
+            'required' => 'The amount to be received will be calculated based on the bitcoin quantity, so input the quantity.',
+        ],
+        'accname' => [
+            'regex' => 'The account name must only contain letters.'
+        ],
+        'fullname' => [
+            'regex' => 'Your full name can only be letters.'
         ],
         'attribute-name' => [
             'rule-name' => 'custom-message',
@@ -173,6 +179,11 @@ return [
         'fname' => 'first name',
         'lname' => 'last name',
         'phonenumber' => 'phone number',
+        'accname' => 'account name',
+        'accnumber' => 'account number',
+        'bankname' => 'bank name',
+        'oldpassword' => 'old password',
+        'fullname' => 'full name'
     ],
 
 ];
