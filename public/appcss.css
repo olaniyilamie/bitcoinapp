@@ -34,6 +34,10 @@
     /*background-image:conic-gradient(rgba(128, 137, 204,0.3) 30deg, rgba(196, 153, 109,0.8) 180deg,  rgba(128, 137, 204,0.3)300deg, rgba(196, 153, 109,0.4) 340deg, rgba(128, 137, 204,0.3)360deg) */
 }
 
+.content_height{
+    min-height: 70vh !important;
+}
+
 #footer{
     background-color:#1f2342;
     color:white;
@@ -47,11 +51,32 @@
 .ullink{
     color:white;
     list-style:none;
+    
+}
+.ullink:hover{
+    color:#1F2342;
+    
 }
 a:hover{
     text-decoration: none;
 }
 
+.footer_link_btn{
+    background-color :rgba(58, 59, 73, 0.6) !important;
+    margin: 0.5vw !important;
+}
+
+.footer_ullink{
+    color:white;
+    list-style:none;
+    display:inline !important;
+    float:left;
+    font-size: small;
+}
+
+.footer_ullink:hover{
+    color: rgb(218, 171, 181) !important;
+}
 a:hover .giftlink{
     color: rgb(198, 122, 0) !important;
 }
@@ -66,4 +91,80 @@ a:hover .giftlink{
 }
 .sellnowBtn:hover{
     color: blanchedalmond;
+}
+
+.profile_header{
+    background-color: rgb(31, 35, 66) !important;
+    color:blanchedalmond !important;
+    font-weight: bold !important;
+    padding: 2vh 0vh !important;
+}
+
+.profile_bg_color{
+    background-color: #D6CCCE;
+}
+
+.detail_col8{
+    background-color: rgb(214 204 206) !important;
+}
+
+/* contact form */
+.formpage_height{
+    padding:0vh 5vw 5vh 5vw !important;
+}
+.formpage_color{
+    background-color: rgb(245 236 238) !important;
+}
+.form_bgcolor{
+    background-color: rgba(31, 35, 66, 0.7) !important;
+    border-radius: 25px ;
+}
+
+.input_with_line{
+    background: transparent;
+    border: none;
+    border-bottom: 1.5px solid #DEE0E1;
+    font-size: small;
+    border-radius: 0%;
+    padding-left: 0px ;
+    padding-top: 4px;
+    padding-bottom: 0px;
+    color: #5D5D5D!important;
+}
+
+.input_with_line::placeholder {
+    color:#5D5D5D !important
+}
+
+.input_with_line:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 0 #f4f8fd;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+   
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    footer{
+    }
 }

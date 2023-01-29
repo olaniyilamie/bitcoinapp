@@ -5,6 +5,7 @@ use App\Http\Controllers\BitcoinController;
 use App\Http\Controllers\EthereumController;
 use App\Http\Controllers\GiftcardController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\FormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,10 +23,19 @@ Route::get('/', function () {
 });
 
 //App Route
+
 Route::get('/profile',[ProfileController::class,'userProfile'])->name('user_profile');
 Route::post('/profile',[ProfileController::class,'ajaxRefreshProfile'])->name('ajax_user_profile');
 Route::post('/profile/edit',[ProfileController::class,'editProfile'])->name('edit_profile');
 Route::post('/profile/update',[ProfileController::class,'updateProfile'])->name('update_profile');
+Route::post('/password/setting',[ProfileController::class,'showPasswordSetting'])->name('password_setting');
+Route::post('/change/password',[ProfileController::class,'changePassword'])->name('change_password');
+Route::post('/profile/bank/details',[ProfileController::class,'bankDetails'])->name('user_bank_details');
+Route::post('/save/bank/details',[ProfileController::class,'saveUserBankDetail'])->name('save_user_bank_details');
+Route::post('/delete/bank/details',[ProfileController::class,'deleteUserBankDetail'])->name('delete_bank_details');
+Route::post('/edit/bank/details',[ProfileController::class,'editUserBankDetail'])->name('edit_bank_details');
+Route::post('/notification',[ProfileController::class,'showNotification'])->name('notification');
+Route::post('/privacy',[ProfileController::class,'showPrivacy'])->name('privacy');
 Route::get('/bitcoins',[BitcoinController::class,'index'])->name('show_bit');
 Route::post('/sellbitcoins',[BitcoinController::class,'sellBitcoin'])->name('sellbtc');
 
@@ -53,3 +63,10 @@ Route::post('/sell-giftcard_others(ebay-amex-macy-vanilla-walmart)',[GiftcardCon
 Route::post('/giftcard_googleplay',[GiftcardController::class,'googlePlayCardType'])->name('get_googleplay_price');
 Route::post('/giftcard_others(sephora-nordstrom-nike-razer)',[GiftcardController::class,'Other2CardType'])->name('get_other2_price');
 Route::post('/giftcard_steam',[GiftcardController::class,'steamCardType'])->name('get_steam_price');
+
+
+
+
+//form route
+Route::get('/contact-us',[FormController::class,'contactForm'])->name('contact_us_form');
+Route::post('/contact-us',[FormController::class,'sendContactMessage'])->name('send_contact_form');
